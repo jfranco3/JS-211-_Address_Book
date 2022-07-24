@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Address Book - Fetch API</title>
-</head>
-<body>
+  </head>
+  <body>
 
-    <header>My Address Book</header>
+    <header><strong>My Address Book</strong></header>
 
-<!-- button to collect user data in the console -->
+    <!-- button to collect user data in the console -->
     <button onclick="fetchAddressBook()">Fetch Address Book</button>
+    <button onclick="consoleUsers()">Console Users</button>
     <button onclick="DisplayUsers()">Display User</button>
-    <!-- <button onclick="DisplayMoreInfo()">Display More User Info</button> -->
 
-    <div id="storage"></div>
+    <!-- all users show up here -->
+    <div id="user-storage"></div>
 
- 
-    <p>${location}</p>
-    <p>${address}</p>
-    <p>${email}</p>
-    <p>${dob}</p>
-    <p>${phone}</p>
-    
-
-
+    <!-- <hr />
+    <div class="displayMoreInfo"></div>
+      <p id="more-info">${location}</p>
+      <p id="more-info">${address}</p>
+      <p id="more-info">${email}</p>
+      <p id="more-info">${dob}</p>
+      <p id="more-info">${phone}</p>
+    <button class="add">Display More User Info</button> -->
 
     <script src="main2.js"></script>
-</body>
+  </body>
 </html>

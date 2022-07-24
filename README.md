@@ -31,6 +31,6 @@ Fetch multiple users on window load
 Add a button to each user that when clicked displays the rest of their information like DOB, address and so forth
 --create html button css visible property
 keep in mind this site: https://www.w3schools.com/cssref/pr_class_visibility.asp
---i can change this property-How?
+--i can change this property via JS-how?
 
 Once you have the functionality working, feel free to style and structure your address book with CSS and HTML
