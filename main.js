@@ -6,7 +6,3 @@ window.onload = function () {
   };
   singleUser();
 };
-
-const logAllUsers = () => {
-  console.log(arrayOfUsers);
-};
