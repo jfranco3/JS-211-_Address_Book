@@ -12,15 +12,15 @@ const fetchAddressBook = () => {
 fetchAddressBook();
 
 const DisplayUsers = () => {
-//store them in a div
+  //store them in a div
   const allUsers = document.getElementById("storage");
 
-//create list item and another button for each listed item to display extra user info
+  //create list item and another button for each listed item to display extra user info
   addressBookArray.results.map((user, index) => {
     const li = document.createElement("li");
 
     const button = document.createElement("button");
-    button.innerHTML = "Display Users Info";
+    button.innerHTML = "Display More Users Info";
 
     const text = document.createTextNode(
       `${user.name.first}, ${user.name.last}, `
