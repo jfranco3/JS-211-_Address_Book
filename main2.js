@@ -21,44 +21,29 @@ const displayUsers = () => {
   //store users in a div
   const allUsers = document.getElementById("user-storage");
 
-  //create list item and another button for each listed item to display extra user info. appends text and button inside it with the posts that were returned in the request.
-  addressBookArray.results.map((user) => {
+  //.map then create li, text, pic to display user info. create button to display more user info. Append all to all users.
+  addressBookArray.results.map((user) => {   
     const li = document.createElement("li");
-
-    let moreInfoButton = document.createElement("button");
-    moreInfoButton.innerHTML = "Display More User Info";
-    moreInfoButton.addEventListener("click", () => {
-      //try--store the data in an object/array to pass through fn. or store each one in variable and pass each through fn
-      const li = document.createElement("li");
-       let text = document.createTextNode(
-        ` AGE: ${user.dob.age}, Location: ${user.location.city}, ${user.location.state}, Phone: ${user.phone}`
-      );
-      li.appendChild(text);
-      allUsers.append(li);
-
-      console.log("THIS IS MORE USER INFO", );
-    });
-    //.addEventListener inside .map-- create event listener
-
     const text = document.createTextNode(
       `${user.name.title}. ${user.name.first} ${user.name.last} : `
     );
     const pic = document.createElement("img");
+    const moreInfoButton = document.createElement("button");
+    moreInfoButton.innerHTML = "Display More User Info";
     li.appendChild(text);
     li.appendChild(pic);
     li.appendChild(moreInfoButton);
     pic.setAttribute("src", user.picture.large);
     allUsers.append(li);
+
+  //add event listener, create li and text to display user info with moreInfoButton. all to allUsers.
+    moreInfoButton.addEventListener("click", () => {
+      const li = document.createElement("li");
+      const text = document.createTextNode(
+        ` AGE: ${user.dob.age}; Location: ${user.location.city}, ${user.location.state}; Phone: ${user.phone}`
+      );
+      li.appendChild(text);
+      allUsers.append(li);
+    });
   });
 };
-
-//suppose to display more user info
-// const button = document.querySelector("button");
-// button.addEventListener("", () => {
-//   const element = document.querySelector(".displayMoreInfo");
-//   element.style.display = "none";
-// });
-
-// access customer info
-// let customerInfo = {cell: results[0].cell, dob: results[0].dob}
-// customerInfo.cell
