@@ -25,9 +25,6 @@ const displayUsers = () => {
   addressBookArray.results.map((user) => {
     const li = document.createElement("li");
 
-    //variable creations to pass through fn
-
-
     let moreInfoButton = document.createElement("button");
     moreInfoButton.innerHTML = "Display More User Info";
     moreInfoButton.addEventListener("click", () => {
@@ -54,19 +51,6 @@ const displayUsers = () => {
     allUsers.append(li);
   });
 };
-
-
-
-
-
-
-// const DisplayUserMoreInfo = () => {
-//   const li = document.createElement("li");
-//   // let text = document.createTextNode(`${dob}, ${location}, ${address}`);
-//   // li.appendChild(text);
-
-//   console.log("THIS IS MORE USER INFO", "this", this);
-// };
 
 //suppose to display more user info
 // const button = document.querySelector("button");
