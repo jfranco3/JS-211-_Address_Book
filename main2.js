@@ -17,16 +17,31 @@ const consoleUsers = () => {
   console.log("ARRAY", addressBookArray);
 };
 
-const DisplayUsers = () => {
+const displayUsers = () => {
   //store users in a div
   const allUsers = document.getElementById("user-storage");
 
   //create list item and another button for each listed item to display extra user info. appends text and button inside it with the posts that were returned in the request.
-  addressBookArray.results.map((user, index) => {
+  addressBookArray.results.map((user) => {
     const li = document.createElement("li");
 
-    const button = document.createElement("button");
-    button.innerHTML = "Display More User Info";
+    //variable creations to pass through fn
+
+
+    let moreInfoButton = document.createElement("button");
+    moreInfoButton.innerHTML = "Display More User Info";
+    moreInfoButton.addEventListener("click", () => {
+      //try--store the data in an object/array to pass through fn. or store each one in variable and pass each through fn
+      const li = document.createElement("li");
+       let text = document.createTextNode(
+        ` AGE: ${user.dob.age}, Location: ${user.location.city}, ${user.location.state}, Phone: ${user.phone}`
+      );
+      li.appendChild(text);
+      allUsers.append(li);
+
+      console.log("THIS IS MORE USER INFO", );
+    });
+    //.addEventListener inside .map-- create event listener
 
     const text = document.createTextNode(
       `${user.name.title}. ${user.name.first} ${user.name.last} : `
@@ -34,17 +49,30 @@ const DisplayUsers = () => {
     const pic = document.createElement("img");
     li.appendChild(text);
     li.appendChild(pic);
-    li.appendChild(button);
+    li.appendChild(moreInfoButton);
     pic.setAttribute("src", user.picture.large);
     allUsers.append(li);
   });
 };
 
+
+
+
+
+
+// const DisplayUserMoreInfo = () => {
+//   const li = document.createElement("li");
+//   // let text = document.createTextNode(`${dob}, ${location}, ${address}`);
+//   // li.appendChild(text);
+
+//   console.log("THIS IS MORE USER INFO", "this", this);
+// };
+
 //suppose to display more user info
 // const button = document.querySelector("button");
 // button.addEventListener("", () => {
 //   const element = document.querySelector(".displayMoreInfo");
-//   element.style.visibility = "visible";
+//   element.style.display = "none";
 // });
 
 // access customer info
