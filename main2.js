@@ -36,7 +36,7 @@ const displayUsers = () => {
     pic.setAttribute("src", user.picture.large);
     allUsers.append(li);
 
-  //add event listener, create li and text to display user info with moreInfoButton. all to allUsers.
+  //add event listener, create li and text to display more user info with moreInfoButton. append text to li then append to allUsers.
     moreInfoButton.addEventListener("click", () => {
       const li = document.createElement("li");
       const text = document.createTextNode(
