@@ -21,7 +21,7 @@ const displayUsers = () => {
   //store users in a div
   const allUsers = document.getElementById("user-storage");
 
-  //.map then create li, text, pic to display user info. create button to display more user info. Append all to all users.
+  //.map then create li, text, pic to display each user info. create button to display more user info. Append all to all users.
   addressBookArray.results.map((user) => {   
     const li = document.createElement("li");
     const text = document.createTextNode(
