@@ -5,7 +5,8 @@ window.onload = function () {
   fetchAddressBook();
 };
 
-//make a fetch request to url inside its parameter brackets. then it will turn the response saved here as res. the res.json will not be saved as posts and saved into the variable.
+//make a fetch request to url inside its parameter brackets. 
+then it will turn the response saved here as res. the res.json will not be saved as posts and saved into the variable.
 const fetchAddressBook = () => {
   fetch("https://randomuser.me/api/?results=20")
     .then((res) => res.json())
